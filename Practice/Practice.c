@@ -1,14 +1,8 @@
 #include <stdio.h>
 
 static int a = 20;
-
-void fun()
-{
-	static int a = 30;
-	a++;
-	printf("Inside Function static = %d \n", a);
-	printf("Inside Function static address = %p \n", &a);
-}
+extern void fun();
+extern void decimal_to_binary(int divident);
 
 int main(int argc, char **argv) {
 	printf("Main static = %d \n", a);
@@ -22,6 +16,6 @@ int main(int argc, char **argv) {
 	fun();
 	printf("Function static = %d \n", a);
 	printf("Function static address = %p \n", &a);
-
+	decimal_to_binary(50);
 	return 0;
 }

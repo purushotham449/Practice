@@ -1,6 +1,6 @@
 PROJECT_ROOT = $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 
-OBJS = Practice.o
+OBJS = Practice.o global.o decimal_binary.o
 
 ifeq ($(BUILD_MODE),debug)
 	CFLAGS += -g
